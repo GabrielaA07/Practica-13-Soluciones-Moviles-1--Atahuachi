@@ -27,7 +27,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     TextView txtRegId, txtMessage;
-    //parapoder ver el canal de notificaciones
+    //para poder ver el canal de notificaciones
     BroadcastReceiver broadcastReceiver;
     private static String TAG = MainActivity.class.getSimpleName();
 
