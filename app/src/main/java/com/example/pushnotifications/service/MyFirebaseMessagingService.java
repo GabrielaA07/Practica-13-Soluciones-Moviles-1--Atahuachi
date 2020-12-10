@@ -9,6 +9,8 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.example.pushnotifications.activities.MainActivity;
 import com.example.pushnotifications.app.Config;
 import com.example.pushnotifications.util.NotificationsUtils;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -30,6 +32,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(RemoteMessage remoteMessage) {
         Log.e(TAG, "FROM: " + remoteMessage.getFrom());
         if (remoteMessage== null) return;
+
         if (remoteMessage.getNotification() != null) {
             Log.e(TAG, "Notification body: " + remoteMessage.getNotification().getBody());
             //TODO: procesar notificación
